@@ -1,6 +1,15 @@
+using CasgemBusinessLayer.Abstract;
+using CasgemBusinessLayer.Concrete;
+using CasgemDataAccessLayer.Abstract;
+using CasgemDataAccessLayer.Concrete;
+using CasgemDataAccessLayer.EntityFremawork;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<Context>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

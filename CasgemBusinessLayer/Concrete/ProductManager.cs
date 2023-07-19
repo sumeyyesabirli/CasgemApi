@@ -33,6 +33,11 @@ namespace CasgemBusinessLayer.Concrete
             return _productDal.GetList();
         }
 
+        public List<Product> TGetProductsWithCategories()
+        {
+            return _productDal.GetProductsWithCategories();
+        }
+
         public void TInsert(Product entity)
         {
             _productDal.Insert(entity);

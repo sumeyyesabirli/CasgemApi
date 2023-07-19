@@ -9,5 +9,6 @@ namespace CasgemBusinessLayer.Abstract
 {
     public interface IProductService : IGenericService<Product>
     {
+        public List<Product> TGetProductsWithCategories();
     }
 }

@@ -52,13 +52,12 @@ namespace CasgemApi.Controllers
             _productService.TUpdate(product);
             return Ok();
         }
-        
-        [HttpGet("{ProductsWithCategories}")]
-        public IActionResult ProductsWithCategories()
-        {
-            var values = _productService.TGetProductsWithCategories();
-            return Ok(values);
 
+        [HttpGet("GetProductsWithCategories")]
+        public IActionResult GetProductsWithCategories()
+        {
+            var value = _productService.TGetProductsWithCategories();
+            return Ok(value);
         }
 
     }
